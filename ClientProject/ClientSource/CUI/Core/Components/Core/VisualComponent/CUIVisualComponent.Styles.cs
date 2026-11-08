@@ -68,6 +68,8 @@ namespace CursedUI
 
     public CUIStylePipeline TypeSpecificStyles => Styles.TypeSpecificStyles;
 
+    public void ReapplyStyles() => Styles.ReapplyStyles();
+
     protected Style_Part Styles { get; } = new();
     public class Style_Part : Part
     {
