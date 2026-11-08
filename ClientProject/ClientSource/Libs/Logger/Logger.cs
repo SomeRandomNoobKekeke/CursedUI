@@ -38,6 +38,8 @@ namespace CUILibs
       }
     }
 
+    public bool PrintVerboseWarnings { get; set; } = true;
+
     public Color LogColor { get; set; } = Color.Cyan;
     public Color WarningColor { get; set; } = Color.Yellow;
     public Color ErrorColor { get; set; } = Color.Red;
@@ -89,6 +91,7 @@ namespace CUILibs
     }
 
     public void Warning(object msg) => Print(msg, WarningColor);
+    public void VerboseWarning(object msg) { if (PrintVerboseWarnings) Print(msg, WarningColor); }
     public void Error(object msg) => Print(msg, ErrorColor);
 
     /// <summary>

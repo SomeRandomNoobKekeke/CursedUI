@@ -177,7 +177,7 @@ namespace CursedUI
         {
           if (component.Parent == null)
           {
-            CUI.Logger.Warning($"Failed to Get [{name}] from [{this}], [{component}] has no parent");
+            CUI.Logger.VerboseWarning($"Failed to Get [{name}] from [{this}], [{component}] has no parent");
             return null;
           }
 
@@ -187,7 +187,7 @@ namespace CursedUI
         {
           if (!component.NamedComponents.ContainsKey(c))
           {
-            CUI.Logger.Warning($"Failed to Get [{name}] from [{this}], [{component}] has no [{c}]");
+            CUI.Logger.VerboseWarning($"Failed to Get [{name}] from [{this}], [{component}] has no [{c}]");
             return null;
           }
 

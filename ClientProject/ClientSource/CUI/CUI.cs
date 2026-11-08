@@ -20,6 +20,8 @@ namespace CursedUI
       Setup = CUISetup.Default();
     }
 
+
+
     public static ErrorHandlingStrategy ErrorHandlingStrategy { get; set; } = ErrorHandlingStrategy.FailFast;
     public static int MaxErrorCount = 5;
 
@@ -44,6 +46,12 @@ namespace CursedUI
     {
       PrintFilePath = false,
     };
+
+    public static bool VerboseLogging
+    {
+      get => Logger.PrintVerboseWarnings;
+      set => Logger.PrintVerboseWarnings = value;
+    }
 
     public static Random Random { get; } = new();
 
